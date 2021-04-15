@@ -1,0 +1,13 @@
+body{
+    background-image:url("imagenes -lol/imagenfondo-lol.jpg");
+}
+header{
+    background: #C4C4C4;
+    mix-blend-mode: lighten;
+    opacity: 0.4; 
+}
+footer{
+    background: #C4C4C4;
+    mix-blend-mode: lighten;
+    opacity: 0.4; 
+}
