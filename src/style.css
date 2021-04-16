@@ -64,11 +64,8 @@ footer{
     top: 1500px; 
    
 } 
-.imagenaviso {
-position: relative;
-width: 200px;
-height: 200px;
-left: 162px;
-top: 300px;
-
-}
+/* footer{
+    background: #C4C4C4;
+    mix-blend-mode: lighten;
+    opacity: 0.4; 
+} */
