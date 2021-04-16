@@ -4,15 +4,17 @@ body {
     /* background-repeat: no-repeat;
     background-size: contain;
 } */}
-.encabezado {
-    position: relative;
-    width: 1411px;
-    height: 160px;
-    left: 16px;
-    top: 16px;
-    background: rgba(134, 131, 131, 0.5);  
-}
-.imgtitulo {
+
+/* header{
+
+} */
+
+/* footer{
+    background: #C4C4C4;
+    mix-blend-mode: lighten;
+    opacity: 0.4; 
+} */
+#imagenlogo {
     position: absolute;
     width: 830px;
     height: 300px;
@@ -25,8 +27,8 @@ body {
     
 
 } 
-/* footer{
-    background: #C4C4C4;
-    mix-blend-mode: lighten;
-    opacity: 0.4; 
-} */
+@media screen and (max-widgit:700px) { 
+   body{
+        background-color:rgb( 195, 255, 127) ; 
+}
+}
