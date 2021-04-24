@@ -10,7 +10,7 @@ header {
     padding: 3.5vw; 
     width: 89vw;
     background: rgba(228, 221, 221, 0.5); 
-    position: fixed;   
+    /* position: fixed;   */
 }
 header::after{
     content: "";
@@ -23,7 +23,7 @@ header::after{
     margin-left: 20vw;  
 } 
 .menu-nav{
-    top: 100%;
+    /* top: 100%; */
     right: 0.1vw; 
     position: absolute;
     background: #5e5e70;
@@ -60,7 +60,7 @@ header::after{
     top: 5vh;
 } 
 
-/* Cuerpo de la página */
+/* Cuerpo de la página principal */
 .contiene {
     display: flex; 
     flex-direction: column; 
@@ -72,7 +72,6 @@ p {
     font-family: 'Denk One', sans-serif;
     font-size: 25px;
     max-width: 90vw;
-    max-height: 10vh;
     color: #e6d7d7;
     margin-top: 19vh;
 }
@@ -82,17 +81,27 @@ p {
     margin-top: 32vh; 
 }
 
+/* cuerpo de la pagina para campeones */
+.seccioncampeones{
+    display: flex; 
+    flex-direction: column; 
+    flex-wrap: nowrap;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-top: 19vh; 
+}
+
 /* Parte inferior de la página */
  footer { 
     display: flex; 
     flex-direction: row-reverse; 
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; 
     padding: 2.5vw;
-    background: rgba(228, 221, 221, 0.5);  
-    margin-top: 8vh; 
-}
+    background: rgba(228, 221, 221, 0.5); 
+    margin-top: 25vh; 
+ }
 .imagenriotgame{
     max-width: 30vw;
     max-height: 20vh;   
