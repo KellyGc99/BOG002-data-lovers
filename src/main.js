@@ -1,6 +1,8 @@
 // import { example } from './data.js';
 // import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
+import {pintarCampeones} from './DOMcampeones.js';
+
 
 const menuHamburguesa = document.querySelector(".menuhamburguesa");
 menuHamburguesa.addEventListener("click",mostrarMenuNavegacion);
@@ -37,16 +39,6 @@ elementos.forEach(function(elemento) {
 });
   
 });
+pintarCampeones();
 
-
-import data from './data/lol/lol.js';
-// console.log(data);
-
-const seccionDeCampeones = document.getElementById("todosLosCampeones");
-const campeones = data.data;
-// console.log(campeones)
-let valores = Object.values(campeones); 
-for(let i=0; i< valores.length; i++){
-    document.getElementById("parrafo").innerHTML +=valores[i].title,valores[i].image.sprite;
-}
 
