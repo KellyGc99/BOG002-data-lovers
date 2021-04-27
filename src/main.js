@@ -18,27 +18,43 @@ document.getElementById('todosLosCampeones').style.display='none';
 let botonCampeones=document.getElementById('botonParaCampeones');
 botonCampeones.addEventListener('click', mostrarPaginaCampeones);
 
+let botonInicio=document.getElementById("home");
+botonInicio.addEventListener("click", mostrarInicio);
+
+let logoInicio=document.querySelector(".botonimagen");
+logoInicio.addEventListener("click", mostrarPaginaInicio);
+
 function mostrarPaginaCampeones() {
 document.getElementById('todosLosCampeones').style.display='flex';
 document.getElementById('contenido1').style.display='none';
-// document.getElementById('fondoPaginaUno').style.display='none';
 }
 
-var elementos = document.querySelectorAll('.botones');
+function mostrarInicio() {
+  document.getElementById('contenido1').style.display='flex';
+  document.getElementById('todosLosCampeones').style.display='none';
+  }
+
+  function mostrarPaginaInicio() {
+    document.getElementById('contenido1').style.display='flex';
+    document.getElementById('todosLosCampeones').style.display='none';
+    }
+
+// var elementos = document.querySelectorAll('.botones');
 // Recorremos cada uno de nuestros elementos
-elementos.forEach(function(elemento) {
+// elementos.forEach(function(elemento) {
   // Obtenemos el texto dentro del div para identificarlo
-  var id = elemento.firstChild;
-  console.log(id)
+  // var id = elemento.firstChild;
+  // console.log(id)
   // Agregamos un listener a cada elemento
-  elemento.addEventListener('click', function() {
-    console.log('Elemento ' + id + ' clickeado');
-    document.getElementById("todosLosCampeones").style.display='none';
-    // document.querySelector('contiene').style.display='flex;
-    elemento.classList.toggle('cont');
-});
+//   elemento.addEventListener('click', function() {
+//     console.log('Elemento ' + id + ' clickeado');
+
+//     document.getElementById("todosLosCampeones").style.display='none';
+//     document.querySelector('contenido1').style.display="flex";
+    
+// });
   
-});
+// });
 pintarCampeones();
 
 

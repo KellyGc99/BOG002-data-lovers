@@ -15,12 +15,12 @@
 <body>
   <header>
     <div class="encabezado">
-      <img src="imagentitulo-lol.png" id="imagenboton" alt="" class="botones">
+      <img src="imagentitulo-lol.png" id="imagenboton" alt="" class="botonimagen">
       <img src="hamburguesa.svg" alt="" class="menuhamburguesa">
     </div>
     <nav class="menu-nav mostrar">
       <ul>
-        <li class="botones">HOME</li>
+        <li class="botonhome" id="home">HOME</li>
         <li class="botoncampeones" id="botonParaCampeones">CHAMPIONS</li>
         <li class="botonroles">ROL</li>
       </ul>
@@ -41,7 +41,13 @@
       </div>
     </section>
     <section id="todosLosCampeones">
-      <p id="parrafo" class="párrafo"></p>
+      <div class="opciones">
+      <select class="abrir-opc cerrar-opc" name="ordenar" id="ordenar">
+        <!-- <option>Order</option> -->
+        <option value="name">A - Z</option>
+        <option value="name-rev">Z - A</option>
+      </select>
+    </div>
     </section>
   </main>
   
