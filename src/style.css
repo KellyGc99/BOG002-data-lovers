@@ -43,7 +43,7 @@ header {
 }
 .menu-nav li{
     border-bottom: 1px solid #fffbff;
-    padding: 2.5em 3.8em;  
+    padding: 1em 2em;  
 }
 .menu-nav li:hover,
 .menu-nav li:focus{
@@ -72,12 +72,16 @@ header {
     max-width: 65vw;
     color: #e6d7d7;
     margin-top: 5vh; 
-    text-align: center;  
+    text-align: center; 
+    /* background: #303131;  */
 }
  .imagenmapa {
-    max-width: 90vw; 
+    max-width: 80vw; 
     height: auto;
     margin-top: 2vh; 
+    border-color:rgb(8, 126, 57);
+    border-width: 5px solid;
+
 }
 
 /* Parte inferior de la página */
@@ -102,59 +106,81 @@ footer {
 }
 
 /* cuerpo de la pagina para visualizar seccion campeones */
+.opcionesOrdenarFiltrar{
+    position:absolute;
+}
+.abrir-opc{
+    width: 18vw;
+    height: 6vh;
+    font-size: 20px;
+    background: rgb(173, 160, 106);
+    border-style:solid;
+    border-color: aliceblue;
+    border-width: 3px;
+}
+.abrir-fil{
+    width: 28vw;
+    height: 6vh;
+    font-size: 20px;
+    background: rgb(173, 156, 86);
+    border-style:solid;
+    border-color: aliceblue;
+    border-width: 3px;
+}
+.letraOrFil{
+    font-size: 28px;  
+} 
+.opcionesordenar{
+    margin-left: 50vw;  
+    margin-top: 2vh;
+    position:absolute;
+}
+.opcionesfiltrar{
+    margin-left: 18vw;  
+    margin-top: 2vh;
+    position:absolute;
+}
+.ordenAlfabetico{
+    font-size: 30px;
+}
 #todosLosCampeones{
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 15vh;
+    justify-content: space-around; 
+    margin-top: 20vh;
 }
 .estilocampeones{
-    background: rgba(222, 199, 96, 0.52);
+    background: rgba(196, 179, 102, 0.856);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 185px;
     height: 240px;
-    margin: 6px 6px;   
+    margin: 6px 6px;  
+    /* border-style:solid;
+    border-color: rgb(10, 10, 10); 
+    border-width: 1px; */
 }
 .divImgenpersonaje{
-    /* padding: 10px 5px 0px 5px; */
     padding: 9% 7%  7%;
 }
 .imagenPersonaje{
     max-width: 100%;     
 }
-/* .nuevoContenido{
-} */
 .nombre{
+    color: #000000;
     font-size: 25px; 
     margin-left: 7%;
+    /* text-shadow: rgba(15, 11, 11, 0.952); */   
 }
 .nombreapodo{
     font-size: 20px; 
-
 }
-.opciones{
-    top: 20%;
-    position:absolute; 
-    left: 12vw;
-    
-}
-.abrir-opc{
-    width: 25vw;
-    height: 5vh;
-    font-size: 20px;
-    background: rgb(238, 204, 55);
-    border-style:solid;
-    border-color: aliceblue;
-    border-width: 3px;
-}
-
 
 
 @media screen and (min-width:768px) { 
     header { 
-        padding: 1.5vw; 
-        width: 96vw;
+        padding: 1.4vw; 
+        width: 95vw;
     }
     #imagenboton {
         max-width: 43vw;
@@ -189,9 +215,6 @@ footer {
         
     } 
 
-
-
-
    .contiene {
     flex-direction: row; 
     justify-content: center; 
@@ -208,4 +231,5 @@ footer {
     max-width: 14vw;
     max-height: 8vh;     
    }
+ 
 }

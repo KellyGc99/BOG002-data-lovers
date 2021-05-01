@@ -1,60 +1,124 @@
 // import { example } from './data.js';
 // import data from './data/pokemon/pokemon.js';
 // import data from './data/rickandmorty/rickandmorty.js';
-import {pintarCampeones} from './DOMcampeones.js';
+// import {pintarCampeones} from './DOMcampeones.js';
 
+import { sortData } from './data.js';
+import data from './data/lol/lol.js';
 
+/* Para mostrar y quitar la barra de navegación con el menú hamburguesa */
 const menuHamburguesa = document.querySelector(".menuhamburguesa");
-menuHamburguesa.addEventListener("click",mostrarMenuNavegacion);
-function mostrarMenuNavegacion () {
-   const navegacion = document.querySelector(".menu-nav")
-   navegacion.classList.toggle("mostrar");
+menuHamburguesa.addEventListener("click", mostrarMenuNavegacion);
+function mostrarMenuNavegacion() {
+  const navegacion = document.querySelector(".menu-nav")
+  navegacion.classList.toggle("mostrar");
 }
 
-/* Para mostrar solo la ventana de inicio */
-document.getElementById('todosLosCampeones').style.display='none';
+/* se oculta la vista de campeones para mostrar solo la ventana de inicio */
+document.getElementById('visualizacionCampeones').style.display = 'none';
 
-/* Para mostrar la vista de campeones y ocultar la vista de inicio*/
-let botonCampeones=document.getElementById('botonParaCampeones');
+/* se muestra la vista de campeones y se oculta la vista de inicio*/
+let botonCampeones = document.getElementById('botonParaCampeones');
 botonCampeones.addEventListener('click', mostrarPaginaCampeones);
-
-let botonInicio=document.getElementById("home");
-botonInicio.addEventListener("click", mostrarInicio);
-
-let logoInicio=document.querySelector(".botonimagen");
-logoInicio.addEventListener("click", mostrarPaginaInicio);
-
 function mostrarPaginaCampeones() {
-document.getElementById('todosLosCampeones').style.display='flex';
-document.getElementById('contenido1').style.display='none';
+  document.getElementById('visualizacionCampeones').style.display = 'flex';
+  document.getElementById('contenido1').style.display = 'none';
 }
 
+/* Para ocultar la vista de campeones y mostrar la vista de inicio haciendo click en la opción home*/
+let botonInicio = document.getElementById("home");
+botonInicio.addEventListener("click", mostrarInicio);
 function mostrarInicio() {
-  document.getElementById('contenido1').style.display='flex';
-  document.getElementById('todosLosCampeones').style.display='none';
-  }
+  document.getElementById('contenido1').style.display = 'flex';
+  document.getElementById('visualizacionCampeones').style.display = 'none';
+}
 
-  function mostrarPaginaInicio() {
-    document.getElementById('contenido1').style.display='flex';
-    document.getElementById('todosLosCampeones').style.display='none';
-    }
+/* Para ocultar la vista de campeones y mostrar la vista de inicio haciendo click en la imagen logo lol*/
+let logoInicio = document.querySelector(".botonimagen");
+logoInicio.addEventListener("click", mostrarPaginaInicio);
+function mostrarPaginaInicio() {
+  document.getElementById('contenido1').style.display = 'flex';
+  document.getElementById('visualizacionCampeones').style.display = 'none';
+}
 
-// var elementos = document.querySelectorAll('.botones');
-// Recorremos cada uno de nuestros elementos
-// elementos.forEach(function(elemento) {
-  // Obtenemos el texto dentro del div para identificarlo
-  // var id = elemento.firstChild;
-  // console.log(id)
-  // Agregamos un listener a cada elemento
-//   elemento.addEventListener('click', function() {
-//     console.log('Elemento ' + id + ' clickeado');
 
-//     document.getElementById("todosLosCampeones").style.display='none';
-//     document.querySelector('contenido1').style.display="flex";
-    
-// });
+let opcionesOrdenar = document.getElementById("ordenar");
+opcionesOrdenar.addEventListener("change", () => {
+  let g=opcionesOrdenar.value
+  console.log(g)
+  document.getElementById("todosLosCampeones").innerHTML= "";
   
-// });
-pintarCampeones();
+  const resultadoOrdenado = sortData(valores);
+  pintarCampeones(resultadoOrdenado);
+  console.log(resultadoOrdenado);
+});
+
+
+const campeones = data.data;
+let valores = Object.values(campeones);
+
+function pintarCampeones(arrayCampeones) {
+  const seccionCampeones = document.getElementById("todosLosCampeones");
+  for (let i = 0; i < arrayCampeones.length; i++) {
+    // nombreApodo[i]=[valores[i].id,valores[i].title,valores[i].img];
+    // console.log(nombreApodo)
+    const llamandoCampeones = document.createElement("div");
+    llamandoCampeones.className = "estilocampeones";
+    seccionCampeones.appendChild(llamandoCampeones);
+    const nuevoDivImgen = document.createElement("div");
+    nuevoDivImgen.className = "divImgenpersonaje";
+    const nuevaImagen = document.createElement("img");
+    nuevaImagen.className = "imagenPersonaje";
+
+    nuevaImagen.src = arrayCampeones[i].splash;
+    nuevoDivImgen.appendChild(nuevaImagen);
+    llamandoCampeones.appendChild(nuevoDivImgen)
+
+    const nuevoDivContenido = document.createElement("div")
+    nuevoDivContenido.className = "nuevoContenido";
+    const nuevoNombre = document.createElement("h1");
+    nuevoNombre.className = "nombre";
+    const apodo = document.createElement("h2");
+    apodo.className = "nombreapodo";
+
+    nuevoNombre.innerHTML = arrayCampeones[i].name;
+    apodo.innerHTML = arrayCampeones[i].title;
+    nuevoDivContenido.appendChild(nuevoNombre);
+    nuevoDivContenido.appendChild(apodo);
+    llamandoCampeones.appendChild(nuevoDivContenido)
+
+  }
+}
+
+pintarCampeones(valores);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* opcionesOrdenar1.addEventListener("change", function(e){
+  console.log(e)
+});
+
+opcionesOrdenar3.addEventListener("change", elNombreDeMiFunción);
+
+function elNombreDeMiFunción(evento){
+  console.log(evento)
+} */
 
 
