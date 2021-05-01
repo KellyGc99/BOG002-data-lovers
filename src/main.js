@@ -41,13 +41,12 @@ function mostrarPaginaInicio() {
   document.getElementById('visualizacionCampeones').style.display = 'none';
 }
 
-
+/* función para ordenar asc y desc*/
 let opcionesOrdenar = document.getElementById("ordenar");
 opcionesOrdenar.addEventListener("change", () => {
   let g=opcionesOrdenar.value
   console.log(g)
   document.getElementById("todosLosCampeones").innerHTML= "";
-  
   const resultadoOrdenado = sortData(valores);
   pintarCampeones(resultadoOrdenado);
   console.log(resultadoOrdenado);
