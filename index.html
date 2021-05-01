@@ -15,36 +15,59 @@
 <body>
   <header>
     <div class="encabezado">
-      <img src="imagentitulo-lol.png" id="nombreDelJuego" alt="" class="botonimagen">
+      <img src="imagentitulo-lol.png" id="imagenboton" alt="" class="botonimagen">
       <img src="hamburguesa.svg" alt="" class="menuhamburguesa">
     </div>
     <nav class="menu-nav mostrar">
       <ul>
-        <li class="botonhome">HOME</li>
+        <li class="botonhome" id="home">HOME</li>
         <li class="botoncampeones" id="botonParaCampeones">CHAMPIONS</li>
-        <li class="botonroles">ROL</li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section class="contiene" id="contenido1">
-      <p>League of Legends is a multiplayer game developed on a map with three lanes and a central space called jungle,
+    <section class="contiene cont" id="contenido1">
+      <p class="textolol">League of Legends is a multiplayer game developed on a map with three lanes and a central
+        space called jungle,
         there the champions are distributed depending on their abilities, all with the sole mission of destroying the
         enemy using different strategies and tools.
-
+        <br>
+        <br>
         Get ready for adventure!
       </p>
       <div>
         <img class="imagenmapa" id="mapaDelJuego" src="imagenes -lol/imagenmapa-lol.jpg">
       </div>
     </section>
-    <section id="todosLosCampeones" class="seccioncampeones">
-      <!-- <h1>hola kelly</h1> -->
-      <p id="parrafo"></p>
+    <section id="visualizacionCampeones">
+      <div class="opcionesOrdenarFiltrar">
+        <div class="opcionesordenar">
+          <label for="ordenAlfabetico" class="letraOrFil">Order</label>
+          <select class="abrir-opc cerrar-opc" name="ordenar" id="ordenar">
+            <!-- <option>Order</option> -->
+            <option value="AZ">A - Z</option>
+            <option value="ZA">Z- A</option>
+          </select>
+        </div>
+        <div class="opcionesfiltrar">
+          <label for="filtrado" class="letraOrFil">Filter by</label>
+          <select class="abrir-fil cerrar-opc" name="ordenar" id="ordenRol">
+            <!-- <option>Order</option> -->
+            <option value="Fighter">Fighter</option>
+            <option value="Tank">Tank</option>
+            <option value="Mage">Mage</option>
+            <option value="Assassin">Assassin</option>
+            <option value="Support">Support</option>
+            <option value="Marksman">Marksman</option>
+          </select>
+        </div>
+      </div>
+      <div id="todosLosCampeones">
+      </div>
     </section>
   </main>
-  
+
   <footer>
     <img class="imagenriotgame" src="imagenes -lol/imagenRiotGame.png">
     <img class="imagenaviso" src="imagenes -lol/imagenaviso-T-lol.png">
