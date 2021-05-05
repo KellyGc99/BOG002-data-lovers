@@ -3,7 +3,7 @@
 // import data from './data/rickandmorty/rickandmorty.js';
 // import {pintarCampeones} from './DOMcampeones.js';
 
-import { sortData } from './data.js';
+import { filtradoPorRoles, sortData } from './data.js';
 import data from './data/lol/lol.js';
 
 /* Para mostrar y quitar la barra de navegación con el menú hamburguesa */
@@ -88,8 +88,16 @@ function pintarCampeones(arrayCampeones) {
 
   }
 }
-
 pintarCampeones(valores);
+
+//Funcion filtrar por roles
+
+const opcionRol = document.getElementById("ordenRol");
+opcionRol.addEventListener("change", () => {
+  let rol=opcionRol.value;
+  document.getElementById("todosLosCampeones").innerHTML= "";
+  pintarCampeones(filtradoPorRoles(valores,rol));
+});
 
 
 

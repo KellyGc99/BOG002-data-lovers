@@ -36,4 +36,10 @@
     }
   }
 
+ 
+  export function filtradoPorRoles(data,rol){
+    const filtrarData= data.filter(campeon =>    
+      campeon.tags[0] == rol||campeon.tags[1] == rol);
+      return filtrarData;
+  } 
   
