@@ -44,12 +44,12 @@ function mostrarPaginaInicio() {
 /* función para ordenar asc y desc*/
 let opcionesOrdenar = document.getElementById("ordenar");
 opcionesOrdenar.addEventListener("change", () => {
-  let g=opcionesOrdenar.value
-  console.log(g)
+  let mostrarValores=opcionesOrdenar.value
+  // console.log(mostrarValores)
   document.getElementById("todosLosCampeones").innerHTML= "";
-  const resultadoOrdenado = sortData(valores);
+  const resultadoOrdenado = sortData(valores, mostrarValores);
   pintarCampeones(resultadoOrdenado);
-  console.log(resultadoOrdenado);
+  // console.log(resultadoOrdenado);
 });
 
 

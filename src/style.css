@@ -194,7 +194,6 @@ footer {
     .menu-nav{
         top: 10vh;
         background: transparent;
-
     } 
     .menu-nav ul{
         display: block; 
@@ -209,8 +208,7 @@ footer {
     }
     .botonroles{
         left: 10em;
-        padding: 0;  
-        
+        padding: 0;    
     } 
 
    .contiene {
