@@ -25,7 +25,7 @@
       if (prev.name < next.name){
       return -1;
       }if (prev.name > next.name){
-        return -1;
+        return 1;
         }
       return 0
       })
